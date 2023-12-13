@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e23f90b0-2057-4617-bc27-b0e7963a7c34">
+	<parameter name="usuario" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="isbn" class="java.lang.Long"/>
+	<field name="idioma" class="java.lang.String"/>
+	<field name="nroPaginas" class="java.lang.Integer"/>
+	<field name="fechaPublicacion" class="java.time.LocalDate"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="222" y="0" width="110" height="30" uuid="f427805f-403c-4ceb-bde7-4d87cce73f69"/>
+				<textFieldExpression><![CDATA["Titulo del reporte"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="480" y="9" width="130" height="30" uuid="1155c304-290b-4a08-8f1a-0379d77c157f"/>
+				<textFieldExpression><![CDATA[$P{usuario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="80" height="30" uuid="8f330fc8-b2b3-43c3-8178-b2a617ca70c4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="10" width="100" height="30" uuid="3d0097e1-74ed-41d6-84ec-fa2923cd2a94"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="10" width="100" height="30" uuid="54929e9b-8203-47b8-987b-59cc2d0fd767"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[IDIOMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="10" width="100" height="30" uuid="18e5195c-4504-45ef-acc3-06f83df90ba2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NRO PAGINAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="10" width="100" height="35" uuid="f92ab4de-ac85-4d73-a220-29c1f41a3ad7"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[FEC PUBLICACION]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="1" width="80" height="30" uuid="6993817f-aecf-438a-b61c-0d1de2f5d3bb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="80" y="0" width="100" height="30" uuid="db0e8d00-dcbf-4652-975e-46e436e9e84b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{isbn}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="0" width="100" height="30" uuid="5b749f80-7370-4a54-b157-e7c1f61f84f9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{idioma}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="280" y="0" width="100" height="30" uuid="455fadc4-10c2-4c06-a057-23af8342ac97"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nroPaginas}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="380" y="0" width="100" height="30" uuid="813e2592-5e66-4f12-9043-94ff9f70018c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaPublicacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
